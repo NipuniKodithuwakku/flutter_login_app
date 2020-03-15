@@ -5,6 +5,7 @@ class App extends StatelessWidget{
   Widget build(context){
     return MaterialApp(
       title: 'Login Screen',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: LoginScreen(),
 

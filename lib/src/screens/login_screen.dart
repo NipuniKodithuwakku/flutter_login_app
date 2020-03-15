@@ -9,12 +9,13 @@ class LoginScreen extends StatefulWidget {
 class LoginScreenState extends State<LoginScreen> {
   Widget build(context) {
     return Container(
+      margin: EdgeInsets.all(20.0),
       child: Form(
           child: Column(
         children: <Widget>[
           emailField(),
           passwordField(),
-          // submitButton(),
+          submitButton(),
         ],
       )),
     );
@@ -32,10 +33,18 @@ class LoginScreenState extends State<LoginScreen> {
 
   Widget passwordField() {
     return TextFormField(
+      obscureText: true,
       decoration: InputDecoration(
         labelText: 'Password',
         hintText: 'password',
       ),
+    );
+  }
+
+  Widget submitButton() {
+    return RaisedButton(
+      onPressed: () {},
+      child: Text('Submit'),
     );
   }
 }
