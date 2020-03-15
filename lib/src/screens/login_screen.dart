@@ -32,17 +32,27 @@ class LoginScreenState extends State<LoginScreen> {
   }
 
   Widget passwordField() {
-    return TextFormField(
-      obscureText: true,
-      decoration: InputDecoration(
-        labelText: 'Password',
-        hintText: 'password',
-      ),
-    );
+    return Container(
+        margin: EdgeInsets.only(bottom: 25.0),
+        child: TextFormField(
+          obscureText: true,
+          decoration: InputDecoration(
+            labelText: 'Password',
+            hintText: 'password',
+          ),
+        ));
+    // return TextFormField(
+    //   obscureText: true,
+    //   decoration: InputDecoration(
+    //     labelText: 'Password',
+    //     hintText: 'password',
+    //   ),
+    // );
   }
 
   Widget submitButton() {
     return RaisedButton(
+      color: Colors.blue,
       onPressed: () {},
       child: Text('Submit'),
     );
