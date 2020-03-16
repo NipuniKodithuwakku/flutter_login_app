@@ -7,6 +7,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen> {
+  //create reference to the widget
   final formKey = GlobalKey<FormState>();
 
   Widget build(context) {
@@ -60,7 +61,9 @@ class LoginScreenState extends State<LoginScreen> {
   Widget submitButton() {
     return RaisedButton(
       color: Colors.blue,
-      onPressed: () {},
+      onPressed: () {
+        formKey.currentState.reset();
+      },
       child: Text('Submit'),
     );
   }
