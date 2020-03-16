@@ -36,6 +36,12 @@ class LoginScreenState extends State<LoginScreen> {
         labelText: 'Email Address',
         hintText: 'you@example.com',
       ),
+      validator: (String value) {
+        if (!value.contains('@')) {
+          return 'Please enter a valid email';
+        }
+        return null;
+      },
     );
   }
 
@@ -48,6 +54,12 @@ class LoginScreenState extends State<LoginScreen> {
             labelText: 'Password',
             hintText: 'password',
           ),
+          validator: (String value) {
+            if (value.length < 4) {
+              return 'Password must be at least 4 characters';
+            }
+            return null;
+          },
         ));
     // return TextFormField(
     //   obscureText: true,
